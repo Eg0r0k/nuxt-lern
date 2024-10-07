@@ -38,7 +38,8 @@ const items = ref([
     },
     {
         title: "Настройки",
-        icon: "solar:settings-bold"
+        icon: "solar:settings-bold",
+        path: "/settings"
     },
     {
         title: 'Календарь',

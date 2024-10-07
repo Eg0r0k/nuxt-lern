@@ -14,7 +14,7 @@
                 <Icon name="solar:settings-bold" /> Настройки
 
             </NuxtLink>
-            <button
+            <button @click="$router.push('/auth/login')"
                 class="inline-flex gap-2 items-center whitespace-nowrap font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-8 rounded-md px-3 text-[16px] justify-start ">
                 <Icon name="ic:baseline-log-out" /> Выйти
             </button>

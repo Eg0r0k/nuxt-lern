@@ -5,8 +5,9 @@
             <TaskRenderer :task="task" @submit="handleSubmit(task.id, $event)" />
         </div>
         <Button variant="outline" @click="nextLevel">Next Level</button>
+        <MonacoEditor class="min-h-[400px]" v-model="value" lang="typescript" />
     </div>
-    <MonacoEditor class="min-h-[400px]" v-model="value" lang="typescript" />
+
 </template>
 
 <script setup lang="ts">

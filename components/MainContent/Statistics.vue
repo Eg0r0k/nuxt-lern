@@ -1,6 +1,6 @@
 <template>
     <div class="flex flex-col">
-        <h2 class="text-2xl mb-4 font-bold">Статистика</h2>
+        <h2 class="text-2xl mb-4 font-bold ">Статистика</h2>
         <AreaChart :data="data" index="name" :categories="['total', 'predicted']" :colors="customColors"
             :show-legend="false" />
     </div>

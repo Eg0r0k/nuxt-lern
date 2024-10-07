@@ -10,19 +10,30 @@ export const useCourseStore = defineStore("course", () => {
   const currentCourseId = ref<number | null>(null);
   const currentLevel = ref(0);
   const userResponses = ref<Record<number, any>>({});
-  const maxLevel = ref(10);
-  function setCurrentCourse(courseId: number) {
-    currentCourseId.value = courseId;
-    currentLevel.value = 0;
-  }
+  const maxLevel = computed(() => {
+    return 10;
+  });
+  const setCurrentCourse = (courseId: number) => {
+    if (currentLevel.value > 0 && courseId > 0) {
+      currentCourseId.value = courseId;
+      currentLevel.value = 0;
+    }
+  };
 
-  function nextLevel() {
+  const backLevel = () => {
+    if (currentLevel.value > 0) {
+      currentLevel.value -= 1;
+    }
+  };
+  const nextLevel = (): void => {
     currentLevel.value += 1;
-  }
-
-  function saveResponse(level: number, response: any) {
+  };
+  const selectLevel = (level: number): void => {
+    currentLevel.value = level;
+  };
+  const saveResponse = (level: number, response: any): void => {
     userResponses.value[level] = response;
-  }
+  };
 
   return {
     currentCourseId,
@@ -30,7 +41,9 @@ export const useCourseStore = defineStore("course", () => {
     userResponses,
     setCurrentCourse,
     maxLevel,
+    backLevel,
     nextLevel,
+    selectLevel,
     saveResponse,
   };
 });

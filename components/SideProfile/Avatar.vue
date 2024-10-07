@@ -22,5 +22,6 @@ interface Props {
     email: string;
 
 }
+
 const props = defineProps<Props>()
 </script>
