@@ -1,5 +1,5 @@
 <template>
-    <div class="relative w-full">
+    <div class="relative w-full min-h-[300px] ">
         <div class="flex justify-between">
             <h2 class="text-2xl mb-4 font-bold">Курсы</h2>
             <nav class=" space-x-1">
@@ -11,8 +11,8 @@
                 </Button>
             </nav>
         </div>
-        <div class=" absolute w-full">
-            <Carousel class="w-full" :opts="{
+        <div class=" relative w-full">
+            <Carousel class="w-full absolute" :opts="{
                 align: 'start',
             }" @init-api="setApi">
                 <CarouselContent>
@@ -31,6 +31,11 @@
                                     </div>
                                     <div class="flex items-center justify-between">
                                         <p class=" text-green-500">Бесплатно</p>
+                                        <button
+                                            class=" rounded-full border p-3 flex items-center justify-center transition hover:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 hover:bg-accent "
+                                            variant="outline">
+                                            <Icon size="14" name="mdi:favorite" />
+                                        </button>
                                     </div>
                                 </CardContent>
                             </Card>
@@ -55,10 +60,10 @@ function setApi(val: CarouselApi) {
 }
 
 function goToCourse() {
-    router.push('/course');
+    router.push('/course/1');
 }
 
 function goToAuthor() {
-    router.push('/author');
+    router.push('/author/1');
 }
 </script>

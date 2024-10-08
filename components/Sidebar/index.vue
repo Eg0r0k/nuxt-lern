@@ -34,7 +34,8 @@ const items = ref([
     },
     {
         title: "Профиль",
-        icon: 'iconamoon:profile-fill'
+        icon: 'iconamoon:profile-fill',
+        path: '/profile'
     },
     {
         title: "Настройки",

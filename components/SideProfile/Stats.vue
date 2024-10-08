@@ -14,8 +14,8 @@
 
 <script setup lang="ts">
 interface Props {
-    level: string;
-    certificates: string;
+    level: number;
+    certificates: number;
 }
 const props = defineProps<Props>()
 </script>

@@ -1,7 +1,10 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: "2024-04-03",
-  devtools: { enabled: false },
+  devtools: { enabled: true },
+  app: {
+    pageTransition: { name: "page", mode: "out-in" },
+  },
   modules: [
     "@nuxtjs/tailwindcss",
     "shadcn-nuxt",
@@ -23,6 +26,7 @@ export default defineNuxtConfig({
     "@nuxt/icon",
     "@nuxtjs/mdc",
   ],
+
   mdc: {
     highlight: {
       langs: [
@@ -36,6 +40,29 @@ export default defineNuxtConfig({
         "python",
         "bash",
         "yaml",
+      ],
+    },
+  },
+  icon: {
+    customCollections: [
+      {
+        prefix: "icons",
+        dir: "./assets/icons",
+      },
+    ],
+    serverBundle: {
+      collections: [
+        "fluent",
+        "mdi",
+        "bxs",
+        "teenyicons",
+        "basil",
+        "iconamoon",
+        "solar",
+        "tabler",
+        "ic",
+        "line-md",
+        "bi",
       ],
     },
   },
