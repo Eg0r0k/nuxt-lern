@@ -29,6 +29,7 @@
                             Loading...
                         </template>
                     </Button>
+
                 </AutoForm>
             </div>
         </div>
@@ -37,7 +38,7 @@
 <script setup lang="ts">
 const isLoading = ref(false)
 import * as z from 'zod'
-import { AutoForm, AutoFormField } from '@/components/ui/auto-form'
+import { AutoForm } from '@/components/ui/auto-form'
 definePageMeta({
     layout: 'auth'
 });

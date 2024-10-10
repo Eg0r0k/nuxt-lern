@@ -1,5 +1,5 @@
 <template>
-    <header class="flex py-2  flex-col justify-between">
+    <header class="flex py-2  flex-col justify-between w-full">
 
         <nav class="flex flex-col  gap-2">
             <div class="flex items-center w-full justify-center my-2">

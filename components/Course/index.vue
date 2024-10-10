@@ -52,13 +52,23 @@ const { data: course, status, error, } = await useLazyAsyncData<Task[]>('course'
                     description: 'Python - это высокоуровневый язык программирования...'
                 },
                 {
+                    id: 1,
+                    type: "radio",
+                    title: "asdsad",
+                    options: [
+                        { id: "test1", value: "tasdasd", label: "Тест 1" },
+                        { id: "test2", value: "asdsad", label: "тест 2 " },
+                        { id: "test3", value: "asdasd", label: "тест 3" },
+                    ]
+                },
+                {
                     id: 6,
                     type: "codeBlock",
                     md: `
-# Привет, я заголовок MD разметки.
-\`\`\` vue
-<TestComponent />
-<p> Test </p>
+            # Привет, я заголовок MD разметки.
+            \`\`\` vue
+            <TestComponent />
+            <p> Test </p>
 \`\`\`
 `
                 }

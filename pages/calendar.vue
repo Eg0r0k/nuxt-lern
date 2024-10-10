@@ -10,4 +10,8 @@
 import { type DateValue, getLocalTimeZone, today } from '@internationalized/date'
 
 const value = ref(today(getLocalTimeZone())) as Ref<DateValue>
+
+definePageMeta({
+    middleware: 'auth'
+})
 </script>

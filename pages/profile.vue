@@ -34,4 +34,11 @@
 
 <script setup lang="ts">
 const authStore = useAuthStore()
+useHead({
+    title: "Profile | Gazpromic"
+})
+definePageMeta({
+    middleware: 'auth'
+
+})
 </script>
